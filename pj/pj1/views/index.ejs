@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="keywords" content="音乐可视化">
+  </head>
+  <body>
+		<header>
+			<h1><%= title %></h1>
+		</header>
+      <div class="left">
+          <ul id="list">
+             <% music.forEach(function(name){%> 
+                <li title='<%= name %>'><%= name %></li>
+             <%})%>
+          </ul>
+      </div>
+      <div class="right" id="box">
+      </div>
+
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/three.min.js"></script>
+    <script type="text/javascript" src="/javascripts/MusicVisualizer.js"></script>
+    <script type="text/javascript" src="/javascripts/OrbitControls.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+
+  </body>
+</html>
